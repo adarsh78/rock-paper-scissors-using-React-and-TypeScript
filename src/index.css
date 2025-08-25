@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,600;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap");
+
+@import "tailwindcss";
+
+*,
+*::after,
+*::before {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}

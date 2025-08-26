@@ -18,7 +18,7 @@ const App = () => {
           <Outlet />
           <button 
           onClick={handleRulesClick}
-          className="border-2 border-[hsl(217,16%,45%)] rounded-md py-1 px-7 tracking-widest">
+          className="cursor-pointer border-2 border-[hsl(217,16%,45%)] rounded-md py-1 px-7 tracking-widest">
             RULES
           </button>
         </div>

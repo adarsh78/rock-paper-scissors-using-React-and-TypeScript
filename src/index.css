@@ -22,3 +22,21 @@
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out forwards;
 }
+
+.scissors {
+  bottom: 12.7rem; /* default (for desktop) */
+}
+
+@media only screen and (max-width: 600px) {
+  .scissors {
+    bottom: 12.7rem; /* mobile */
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .scissors {
+    bottom: 12.7rem; /* tablet */
+  }
+}
+
+

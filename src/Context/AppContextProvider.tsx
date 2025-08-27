@@ -1,10 +1,11 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState, type Dispatch, type SetStateAction } from "react";
 
 interface CounterContextType {
   score: number;
   userPickedImage: string;
   housePickedImage: string;
   handleUserImageClick: (src: string) => void;
+  setScore: Dispatch<SetStateAction<number>>
 }
 
 export const AppContext = createContext<CounterContextType | undefined>(
@@ -26,12 +27,30 @@ const AppContextProvider = ({ children }: { children: React.ReactNode }) => {
     "./images/icon-rock.svg",
   ];
 
+  useEffect(() => {
+    const savedUserPickedImage = localStorage.getItem("userPickedImage");
+    if(savedUserPickedImage){
+      setUserPickedImage(savedUserPickedImage);
+    }
+
+    const savedHousePickedImage = localStorage.getItem("housePickedImage");
+    if(savedHousePickedImage){
+      setHousePickedImage(savedHousePickedImage);
+    }
+  }, [])
+
   const handleUserImageClick = (src: string) => {
       setUserPickedImage(src);
+      localStorage.setItem("userPickedImage", src);
       const random = Math.floor(Math.random() * 3);
       setHousePickedImage(houseImageOptions[random]);
-
+      localStorage.setItem("housePickedImage", houseImageOptions[random]);
   };
+
+  useEffect(() => {
+    localStorage.setItem("score", score.toString());
+  }, [score]);
+
 
   return (
     <AppContext.Provider
@@ -40,6 +59,7 @@ const AppContextProvider = ({ children }: { children: React.ReactNode }) => {
         userPickedImage,
         housePickedImage,
         handleUserImageClick,
+        setScore,
       }}
     >
       {children}

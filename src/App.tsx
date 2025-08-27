@@ -18,8 +18,8 @@ const App = () => {
           <Outlet />
           <button 
           onClick={handleRulesClick}
-          className="cursor-pointer border-2 border-[hsl(217,16%,45%)] rounded-md py-1 px-7 tracking-widest">
-            RULES
+          className="cursor-pointer uppercase border-2 border-[hsl(217,16%,45%)] rounded-md py-1 px-7 tracking-widest hover:bg-white hover:text-[hsl(214,47%,23%)]">
+            Rules
           </button>
         </div>
         <Rules rulesOpen={rulesOpen} setIsRulesOpen={setIsRulesOpen}/>

@@ -6,8 +6,8 @@ const Rules = ({ rulesOpen, setIsRulesOpen }: RulesProps) => {
   return (
     <>
       {rulesOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-50 transition-opacity duration-300 ease-in-out">
-          <div className="flex flex-col items-center gap-[10rem] transform transition-all duration-300 ease-in-out scale-95 opacity-0 animate-fadeIn">
+        <div className="fixed inset-0 z-50 flex items-center justify-center md:bg-black/40 transition-opacity duration-300 ease-in-out">
+          <div className="flex flex-col items-center pt-[5rem] md:pt-0 gap-[10rem] md:gap-4 bg-white h-screen w-screen md:h-[400px] md:pt-3 md:w-[400px] md:rounded-xl transform transition-all duration-300 ease-in-out scale-95 opacity-0 animate-fadeIn">
             <p className="text-gray-600 text-2xl font-bold">RULES</p>
             <img
               src="./images/image-rules.svg"

@@ -110,7 +110,7 @@ const Gamepage = () => {
         <p className="uppercase text-[3rem]">{status}</p>
         <button
           onClick={() => navigate("/")}
-          className="bg-white text-[hsl(229,25%,31%)] px-[3rem] py-[0.5rem] rounded-md hover:bg-[hsl(229,25%,31%)] hover:text-white cursor-pointer"
+          className="bg-white text-[hsl(229,25%,31%)] px-[3rem] py-[0.5rem] rounded-md hover:text-[hsl(349,70%,56%)] cursor-pointer"
         >
           Play Again
         </button>

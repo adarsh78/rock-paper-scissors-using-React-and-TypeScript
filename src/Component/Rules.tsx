@@ -4,6 +4,7 @@ interface RulesProps {
 }
 
 console.log("A Console");
+console.log("A Console");
 
 const Rules = ({ rulesOpen, setIsRulesOpen }: RulesProps) => {
   return (

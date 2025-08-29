@@ -2,6 +2,9 @@ interface RulesProps {
   rulesOpen: boolean;
   setIsRulesOpen: (open: boolean) => void;
 }
+
+console.log("A Console");
+
 const Rules = ({ rulesOpen, setIsRulesOpen }: RulesProps) => {
   return (
     <>
